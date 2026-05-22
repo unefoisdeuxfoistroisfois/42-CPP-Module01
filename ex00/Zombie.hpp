@@ -2,7 +2,7 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
-#include <string.h>
+#include <string>
 
 class Zombie {
     private:
@@ -12,6 +12,14 @@ class Zombie {
         Zombie(std::string name);
         ~Zombie(void); // toujours en void
         void    announce(void);
+
 };
+
+/* Fonciton libre */
+
+// newZombie.cpp
+Zombie* newZombie(std::string name);
+//randomChump.cpp
+void randomChump(std::string name);
 
 #endif
