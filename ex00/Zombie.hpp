@@ -4,22 +4,19 @@
 #include <iostream>
 #include <string>
 
-class Zombie {
+class Zombie{
     private:
         std::string name;
 
     public:
         Zombie(std::string name);
-        ~Zombie(void); // toujours en void
+        ~Zombie(void);
         void    announce(void);
 
 };
 
-/* Fonciton libre */
-
-// newZombie.cpp
+/* Fonctions libre */
 Zombie* newZombie(std::string name);
-//randomChump.cpp
-void randomChump(std::string name);
+void    randomChump(std::string name);
 
 #endif
