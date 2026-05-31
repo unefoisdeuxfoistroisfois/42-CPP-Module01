@@ -1,15 +1,14 @@
 #include "Zombie.hpp"
 
 int main(){
-
-    //Stack (pile)
-    // Zombie objetzombie("Bradley");
+    // Stack (pile)
+    //Zombie objetzombie("Brad");
     //objetzombie.announce();
 
-    //Heap (tas)
-    Zombie *objetzombie = new Zombie("Bradley");
+    // Heap (tas)
+    Zombie *objetzombie = newZombie("Bradley");
     objetzombie->announce();
-    delete objetzombie; // détruit et libère la memoire
+    delete objetzombie;
 
     randomChump("Divina");
 

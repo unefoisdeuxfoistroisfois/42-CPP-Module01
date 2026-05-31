@@ -1,17 +1,15 @@
 #include "Zombie.hpp"
 
-// Constructeur
+// Constructor
 Zombie::Zombie(std::string name){
     this->name = name;
 }
 
-// Déstructeur
-Zombie::~Zombie(void){
-    std::cout << name << " has been destroyed" << std::endl;
+// Destructor
+Zombie::~Zombie(){
+    std::cout << name << ": has been destroy" << std::endl;
 }
 
-void Zombie::announce(void){ //mettre le void car en C++98
-
-    //name doit venir de notre consrtucteur
+void    Zombie::announce(){
     std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

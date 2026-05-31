@@ -12,10 +12,9 @@ class Zombie{
         Zombie(std::string name);
         ~Zombie(void);
         void    announce(void);
-
 };
 
-/* Fonctions libre */
+// Fonctions libre
 Zombie* newZombie(std::string name);
 void    randomChump(std::string name);
 
