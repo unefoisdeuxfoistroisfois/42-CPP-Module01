@@ -1,7 +1,7 @@
 #include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), objweapon(weapon){
-    std::cout << "HumanA" << _name << " created with " << objweapon.getType() << std::endl;
+HumanA::HumanA(std::string name, Weapon &weapon) : _name(name), _objweapon(weapon){
+    std::cout << "HumanA : " << _name << " created with " << _objweapon.getType() << std::endl;
 }
 
 HumanA::~HumanA(){
@@ -9,5 +9,5 @@ HumanA::~HumanA(){
 }
 
 void    HumanA::attack(){
-    std::cout << _name << " attacks with their " << objweapon.getType() <<std::endl;
+    std::cout << _name << " attacks with their " << _objweapon.getType() <<std::endl;
 }
