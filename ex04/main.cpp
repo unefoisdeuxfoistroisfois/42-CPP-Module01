@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
+
 
 void    ft_replace(std::string &line, std::string s1, std::string s2){
 
@@ -27,7 +29,8 @@ int main(int argc, char **argv){
     // open
     file.open(argv[1]);
     std::string outfilename = std::string(argv[1]) + ".replace";
-    outfile.open(outfilename);
+    outfile.open(outfilename.c_str());
+
 
     if (file.fail()){
         std::cout << "Error : " << argv[1] << "is not a file" << std::endl;
