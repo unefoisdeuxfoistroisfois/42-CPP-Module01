@@ -3,8 +3,8 @@
 int main(int argc, char **argv){
 
     if (argc != 2){
-        std::cout << "Usage : ./harlFilter <choice>" << std::endl;
-        std::cout << "choices : DEBUG, INFO, WARNING, ERROR" << std::endl;
+        std::cout << "Usage : ./harlFilter <choices>" << std::endl;
+        std::cout << "choices : DEBUG, INFO, WARNING and ERROR" << std::endl;
         return (EXIT_FAILURE);
     }
 
@@ -31,22 +31,26 @@ int main(int argc, char **argv){
         case 0:
             std::cout << "[ DEBUG ]" << std::endl;
             harl.complain("DEBUG");
+            std::cout << std::endl;
 			// __attribute__ ((fallthrough)); linux/GCC
             // fall through
 
         case 1:
             std::cout << "[ INFO ]" << std::endl;
             harl.complain("INFO");
+            std::cout << std::endl;
             // fall through
 
         case 2:
             std::cout << "[ WARNING ]" << std::endl;
             harl.complain("WARNING");
+            std::cout << std::endl;
             // fall through
 
         case 3:
             std::cout << "[ ERROR ]" << std::endl;
             harl.complain("ERROR");
+            std::cout << std::endl;
             break;
 
         default:
