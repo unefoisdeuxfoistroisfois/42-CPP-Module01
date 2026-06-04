@@ -30,8 +30,6 @@ int main(int argc, char **argv){
     file.open(argv[1]);
     std::string outfilename = std::string(argv[1]) + ".replace";
     outfile.open(outfilename.c_str());
-
-
     if (file.fail()){
         std::cout << "Error : " << argv[1] << "is not a file" << std::endl;
         return (EXIT_FAILURE);
@@ -39,7 +37,6 @@ int main(int argc, char **argv){
 
     // getline gere deja le eof
     while (std::getline(file, line)){
-
         // chaque line j'appele 
         ft_replace(line, argv[2], argv[3]);
         // std::cout << line << "\n";

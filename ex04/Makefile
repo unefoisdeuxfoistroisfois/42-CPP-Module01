@@ -12,14 +12,14 @@ all:    $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@echo "\033[1;32mCOMPILATION REUSSIE\033[0m"
+	@printf "\033[1;32mCOMPILATION REUSSIE\033[0m"
 
 clean:
 	$(RM) $(OBJ)
-	@echo "\033[1;31mSUPPRESSION DES .O\033[0m"
+	@printf "\033[1;31mSUPPRESSION DES .O\033[0m"
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "\033[1;31mSUPPRESSION DU BINAIRE\033[0m"
+	@printf "\033[1;31mSUPPRESSION DU BINAIRE\033[0m"
 
 re: fclean all
