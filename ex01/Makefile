@@ -8,18 +8,24 @@ SRC     = main.cpp Zombie.cpp zombieHorde.cpp
 OBJ     = $(SRC:.cpp=.o)
 RM      = rm -f
 
+# Couleurs
+NC		= \033[0m
+GREEN	= \033[1;32m
+RED		= \033[1;31m
+
 all:    $(NAME)
 
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
-	@printf "\033[1;32mCOMPILATION REUSSIE\033[0m\n"
+	@printf "$(GREEN)COMPILATION SUCCESSFUL$(NC)\n"
 
 clean:
 	$(RM) $(OBJ)
-	@printf "\033[1;31mSUPPRESSION DES .O\033[0m\n"
+	@printf "$(RED)REMOVING .O FILES$(NC)\n"
 
 fclean: clean
 	$(RM) $(NAME)
-	@printf  "\033[1;31mSUPPRESSION DU BINAIRE\033[0m\n"
+	@printf "$(RED)REMOVING BINARY$(NC)\n"
+
 
 re: fclean all
